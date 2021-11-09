@@ -12,16 +12,19 @@ generateRuleTests({
   bad: [
     {
       template: '<div class="{{clazz}}"></div>',
+      fixedTemplate: '<div class={{clazz}}></div>',
 
       result: {
         message: 'Unnecessary string concatenation. Use {{clazz}} instead of "{{clazz}}".',
         source: '"{{clazz}}"',
         line: 1,
         column: 11,
+        isFixable: true,
       },
     },
     {
       template: '<img src="{{url}}" alt="{{t "alternate-text"}}">',
+      fixedTemplate: '<img src={{url}} alt={{t "alternate-text"}}>',
 
       results: [
         {
@@ -29,6 +32,7 @@ generateRuleTests({
           source: '"{{url}}"',
           line: 1,
           column: 9,
+          isFixable: true,
         },
         {
           message:
@@ -36,6 +40,7 @@ generateRuleTests({
           source: '"{{t "alternate-text"}}"',
           line: 1,
           column: 23,
+          isFixable: true,
         },
       ],
     },
