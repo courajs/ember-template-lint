@@ -18,6 +18,7 @@ generateRuleTests({
   bad: [
     {
       template: '<Input type="text" size="10" />',
+      fixedTemplate: '<Input @type="text" size="10" />',
       verifyResults(results) {
         expect(results).toMatchInlineSnapshot(`
           Array [
@@ -26,6 +27,7 @@ generateRuleTests({
               "endColumn": 18,
               "endLine": 1,
               "filePath": "layout.hbs",
+              "isFixable": true,
               "line": 1,
               "message": "Setting the \`type\` attribute on the builtin <Input> component is not allowed. Did you mean \`@type\`?",
               "rule": "builtin-component-arguments",
@@ -38,6 +40,7 @@ generateRuleTests({
     },
     {
       template: '<Input @type="checkbox" checked />',
+      fixedTemplate: '<Input @type="checkbox" @checked={{true}} />',
       verifyResults(results) {
         expect(results).toMatchInlineSnapshot(`
           Array [
@@ -46,6 +49,7 @@ generateRuleTests({
               "endColumn": 31,
               "endLine": 1,
               "filePath": "layout.hbs",
+              "isFixable": true,
               "line": 1,
               "message": "Setting the \`checked\` attribute on the builtin <Input> component is not allowed. Did you mean \`@checked\`?",
               "rule": "builtin-component-arguments",
@@ -58,6 +62,7 @@ generateRuleTests({
     },
     {
       template: '<Textarea value="Tomster" />',
+      fixedTemplate: '<Textarea @value="Tomster" />',
       verifyResults(results) {
         expect(results).toMatchInlineSnapshot(`
           Array [
@@ -66,6 +71,7 @@ generateRuleTests({
               "endColumn": 25,
               "endLine": 1,
               "filePath": "layout.hbs",
+              "isFixable": true,
               "line": 1,
               "message": "Setting the \`value\` attribute on the builtin <Textarea> component is not allowed. Did you mean \`@value\`?",
               "rule": "builtin-component-arguments",

@@ -2,6 +2,8 @@
 
 ✅ The `extends: 'recommended'` property in a configuration file enables this rule.
 
+🔧 The `--fix` option on the command line can automatically fix some of the problems reported by this rule.
+
 The builtin `Input` component has several arguments that match attributes
 of the lower-case `input` HTML element. These arguments should be set via e.g.
 `@type`, instead of `type`, but it is easy to forget and can cause subtle

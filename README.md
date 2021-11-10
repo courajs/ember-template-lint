@@ -89,7 +89,7 @@ Each rule has emojis denoting:
 | :-------------------------------------------------------------------------------------------------------- | :-- | :-- | :-- | --- |
 | [attribute-indentation](./docs/rule/attribute-indentation.md)                                             |     |     |     |     |
 | [block-indentation](./docs/rule/block-indentation.md)                                                     |     | 💅  |     |     |
-| [builtin-component-arguments](./docs/rule/builtin-component-arguments.md)                                 | ✅  |     |     |     |
+| [builtin-component-arguments](./docs/rule/builtin-component-arguments.md)                                 | ✅  |     |     | 🔧  |
 | [deprecated-inline-view-helper](./docs/rule/deprecated-inline-view-helper.md)                             | ✅  |     |     |     |
 | [deprecated-render-helper](./docs/rule/deprecated-render-helper.md)                                       | ✅  |     |     |     |
 | [eol-last](./docs/rule/eol-last.md)                                                                       |     | 💅  |     | 🔧  |
